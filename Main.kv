@@ -1,0 +1,164 @@
+
+
+
+
+
+<ScreenOne>:
+    GridLayout:
+        cols: 2
+        Label:
+            text: 'Username'
+            font_size: 32
+
+        TextInput:
+
+            text:"  "
+            multiline: False
+
+        Label:
+            text: 'Password'
+            font_size: 32
+
+        TextInput:
+
+            text:"  "
+            multiline: False
+
+
+        Button:
+            text: " Start "
+            pos: 200, 200
+            size: 20, 50
+            font_size: 32
+            color: 0,0,0,1
+            background_color: .88, .88, .88, 1
+            background_normal:''
+            size_hint: .3, .3
+
+            on_press:
+                root.manager.transition.direction = "left"
+                root.manager.transition.duration = 1
+                root.manager.current = "Screen_two"
+
+
+
+
+<ScreenTwo>:
+    GridLayout:
+        cols: 2
+
+        Label:
+            text: 'Gender'
+            font_size: 32
+
+        TextInput:
+
+            text:"  "
+            multiline: False
+
+
+        Label:
+            text: 'age'
+            font_size: 32
+
+        TextInput:
+
+            text:"  "
+            multiline: False
+
+        Label:
+            text: 'Wight'
+            font_size: 32
+
+        TextInput:
+
+            text:"  "
+            multiline: False
+
+
+
+
+        Button:
+
+            text: " Save "
+            pos: 200, 200
+            size: 20, 50
+            font_size: 32
+            color: 0,0,0,1
+            background_color: .88, .88, .88, 1
+            background_normal:''
+            size_hint: .3, .3
+            on_press:
+                root.manager.transition.direction = "left"
+                root.manager.transition.duration = 1
+                root.manager.current = "Screen_three"
+
+
+
+<ScreenThree>
+    GridLayout:
+        cols: 2
+
+
+
+        Button:
+            text: " Check symptoms "
+            pos: 50, 100
+            size: 20, 50
+            font_size: 32
+            color: 0,0,0,1
+            background_color: .88, .88, .88, 1
+            background_normal:''
+            size_hint: .3, .3
+            on_press:
+
+                root.manager.transition.direction = "left"
+                root.manager.transition.duration = 1
+                root.manager.current = "Screen_Four"
+
+
+
+
+
+<ScreenFour>:
+    GridLayout:
+        cols: 2
+
+
+
+        TextInput:
+            text:" insert more syptoms "
+            size_hint: 0.35,0.25
+            pos_hint:{"right":1, "top":1}
+            color:1,0,0,1
+
+
+
+        Button:
+            text: " Show result "
+            pos: 50, 100
+            size: 20, 50
+            font_size: 32
+            color: 0,0,0,1
+            background_color: .88, .88, .88, 1
+            background_normal:''
+            size_hint: .3, .3
+            on_press:
+
+                root.manager.transition.direction = "left"
+                root.manager.transition.duration = 1
+                root.manager.current = "Screen_one"
+
+        Button:
+            text: " Edit information "
+            pos: 200, 200
+            size: 20, 50
+            font_size: 32
+            color: 0,0,0,1
+            background_color: .88, .88, .88, 1
+            background_normal:''
+            size_hint: .3, .3
+            on_press:
+                root.manager.transition.direction = "right"
+                root.manager.transition.duration = 1
+                root.manager.current = "Screen_two"
