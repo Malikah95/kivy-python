@@ -23,7 +23,7 @@ Builder.load_file("Main.kv")
 
 
 
-# start screen
+# start screennn
 class ScreenOne(Screen):
    pass
 
